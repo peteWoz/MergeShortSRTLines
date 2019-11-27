@@ -77,19 +77,16 @@ public class MergeSubsMain extends JPanel implements ActionListener {
         //Graphics Repository (but we extracted it from the jar).
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
-        openButton = new JButton("Open a File",
-                createImageIcon("resources/Open16.gif"));
+        openButton = new JButton("Open a File");
         openButton.addActionListener(this);
 
         //Create the save button.  We use the image from the JLF
         //Graphics Repository (but we extracted it from the jar).
-        saveButton = new JButton("Save a File",
-                createImageIcon("resources/Save16.gif"));
+        saveButton = new JButton("Save a File");
         saveButton.setEnabled(goPressed);
         saveButton.addActionListener(this);
 
-        goButton = new JButton(" Go ",
-                createImageIcon("resources/go-button-small.png"));
+        goButton = new JButton(" Go ");
         //goButton.setBorder(BorderFactory.createLineBorder(Color.BLUE, 1));
         goButton.addActionListener(this);
 
@@ -133,23 +130,6 @@ public class MergeSubsMain extends JPanel implements ActionListener {
 //        }
 //    }
 
-    /**
-     * Returns an ImageIcon, or null if the path was invalid.
-     */
-    protected static ImageIcon createImageIcon(String path) {
-        // System.out.println(FileChooserDemo.class.getResource(path).toString());
-        if (MergeSubsMain.class.getResource(path) != null) {
-            return new ImageIcon(path);
-        } else {
-            System.err.println("Couldn't find file: " + path);
-            return null;
-        }
-        //return new ImageIcon(path);
-    }
-
-    protected static ImageIcon readImageIcon(String path) {
-        return new ImageIcon(ClassLoader.getSystemClassLoader().getResource(path).getFile());
-    }
 
     /**
      * Create the GUI and show it.  For thread safety,
