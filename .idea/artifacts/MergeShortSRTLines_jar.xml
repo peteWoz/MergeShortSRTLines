@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MergeShortSRTLines:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MergeShortSRTLines_jar</output-path>
+    <root id="archive" name="MergeShortSRTLines.jar">
+      <element id="module-output" name="MergeShortSRTLines" />
+    </root>
+  </artifact>
+</component>
